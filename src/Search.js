@@ -48,7 +48,15 @@ export default function Search() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
-        <p>Open-source code by Yuliia Zubenko</p>
+        <p>
+          Open-source code by{" "}
+          <a
+            href="https://github.com/yuliiazubenko/weather-app-react"
+            target="blank"
+          >
+            Yuliia Zubenko
+          </a>
+        </p>
       </div>
     );
   } else {

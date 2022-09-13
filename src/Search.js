@@ -35,6 +35,19 @@ export default function Search() {
     </form>
   );
 
+  let copyright = (
+    <p>
+      Open-source code by
+      <a
+        href="https://github.com/yuliiazubenko/weather-app-react"
+        target="blank"
+      >
+        {" "}
+        Yuliia Zubenko
+      </a>
+    </p>
+  );
+
   if (loaded) {
     return (
       <div>
@@ -48,18 +61,15 @@ export default function Search() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
-        <p>
-          Open-source code by{" "}
-          <a
-            href="https://github.com/yuliiazubenko/weather-app-react"
-            target="blank"
-          >
-            Yuliia Zubenko
-          </a>
-        </p>
+        {copyright}
       </div>
     );
   } else {
-    return form;
+    return (
+      <div>
+        {form}
+        {copyright}
+      </div>
+    );
   }
 }
